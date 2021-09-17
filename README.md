@@ -1,6 +1,6 @@
 # README
 
-To get started, [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) this project, then click the button below.
+To get started, [fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) this project (There's a form button in the top right), then click the button below in your new forked repo.
 
 Add a new remote pointing to your fork, and push your changes to this remote.
 
