@@ -1,6 +1,8 @@
 import React from 'react';
+import {observer} from "mobx-react-lite";
+import {todoStore} from "../todoStore";
 
-export const CreateTodo = ({ onCreate }) => {
+export const CreateTodo = observer(({ onCreate }) => {
     const [ text, setText ] = React.useState("");
 
     const handleChange = React.useCallback(e => {
@@ -9,13 +11,9 @@ export const CreateTodo = ({ onCreate }) => {
 
     const handleCreate = React.useCallback(e => {
         e.preventDefault();
-
-        // To create a todo, we must add it to the todoStore.
-        // take a look at todoStore.js, and determine how to do add
-        // a todo
-        throw new Error("Not yet implemented");
-
-        setText("");
+        
+        todoStore.addTodo(text);
+        setText(text);
     }, [onCreate, setText, text]);
 
     return(
@@ -30,4 +28,4 @@ export const CreateTodo = ({ onCreate }) => {
             </div>
         </form>
     )
-}
+});
